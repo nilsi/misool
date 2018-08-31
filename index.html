@@ -35,7 +35,7 @@
             font-size: 18px;
             font-weight: 400;
         }
-
+        
         h4 {
             color: red;
             font-size: 16px;
@@ -76,7 +76,7 @@
         .nav-links a:hover{
             border-bottom: 2px solid #000;
         }
-
+        
         .group {
             display: flex;
             padding-top: 70px;
@@ -122,9 +122,9 @@
         .product-info h1{
             margin-bottom: 5px;
         }
-
-        .form {
-            margin-top: 50px;
+        
+        form {
+            margin-top: 30px;
             max-width: 360px;
         }
         
@@ -133,15 +133,15 @@
             flex-direction: row;
             margin-bottom: 10px;
         }
-
+        
         .email-input {
             min-width: 00px;
         }
-
+        
         .product-info .select-dropdown:first-child {
             margin-right: 10px;
         }
-
+        
         .product-info .select-dropdown{
             position: relative;
             width: 50%;
@@ -151,7 +151,7 @@
         .product-info select{
             cursor: pointer;
         }
-
+        
         .form-element {
             width: 100%;
             padding: 12px 92px 12px 15px;
@@ -165,6 +165,11 @@
             appearance: none;
             outline: none;
         }
+
+        .form-element::placeholder {
+            color: #aaa;
+            opacity: 1; /* Firefox */
+        }
         
         select:active, select:focus {
             outline: none;
@@ -175,7 +180,7 @@
             content: " ";
             cursor: pointer;
             position: absolute;
-            top: 30%;
+            top: 48%;
             right: 10%;
             width: 0; 
             height: 0; 
@@ -184,7 +189,7 @@
             border-top: 5px solid #aaa;
         }
         
-        .product-info a.add-btn {
+        .product-info .add-btn {
             width: 100%;
             background-color: #444;
             border-radius: 2px;
@@ -198,7 +203,7 @@
             transition: all 400ms ease;
         }
         
-        a.add-btn:hover{
+        .add-btn:hover{
             background-color: #555;
         }
         
@@ -206,12 +211,12 @@
             margin-bottom: 30px;
         }
         
-        .product-info p a{
-            border-bottom: 1px dotted #444;
-            color: #444;
-            font-weight: 700;
-            text-decoration: none;
-            transition: all 400ms ease;
+        .add-btn {
+            color: white;
+        }
+
+        .product-info p {
+            color: #868686;
         }
         
         .product-info p a:hover{
@@ -252,7 +257,7 @@
             text-align: center;
             vertical-align: middle;
         }
-    
+        
         footer h3{
             color: #bbb;
             font-size: 12px;
@@ -272,72 +277,73 @@
     <div class="wrapper"> 
         <div class="nav">
             <!--<a href="" class="logo"><img src="https://static.mailchimp.com/web/brand-assets/logo-dark.png" alt="logo"></a>
-            
-            <div class="nav-links">
-                <a href="">Store</a>
-                <a href="">Collections</a>
-                <a href="">About</a>
-                <a href="">Contact</a>
+                
+                <div class="nav-links">
+                    <a href="">Store</a>
+                    <a href="">Collections</a>
+                    <a href="">About</a>
+                    <a href="">Contact</a>
+                </div>
+                
+                
+                <a href="" class="cart-icon"><i class="fa fa-shopping-cart"></i></a>-->
             </div>
             
-            
-            <a href="" class="cart-icon"><i class="fa fa-shopping-cart"></i></a>-->
-        </div>
-        
-        <div class="product group">
-            <div class="col-1-2 product-image">
-                <div class="bg"></div>
-                <div class="indicator">
-                    <div class="dot one"></div>
-                    <div class="dot two"></div>
-                    <div class="dot three"></div>
-                    <div class="dot four"></div>
-                    <div class="dot five"></div>
+            <div class="product group">
+                <div class="col-1-2 product-image">
+                    <div class="bg"></div>
+                    <div class="indicator">
+                        <div class="dot one"></div>
+                        <div class="dot two"></div>
+                        <div class="dot three"></div>
+                        <div class="dot four"></div>
+                        <div class="dot five"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-1-2 product-info">
-                <h1>Misool Makoli Rice Wine</h1>
-                <h2>$40</h2>
-                <h4>Sold out</h4>
-                
-                    <div class="form"> 
-                            <div class="row">
-                <div class="select-dropdown">
-                    <select class="form-element">
-                        <option value="size" selected>Plain</option>
-                        <option value="size">Strawberry</option>
-                    </select>
-                </div>
-                
-                <div class="select-dropdown">
-                    <select class="form-element">
-                        <option value="quantity">1</option>
-                        <option value="quantity">2</option>
-                        <option value="quantity">3</option>
-                        <option value="quantity">4</option>
-                    </select>
-                </div>
-                </div>
-                
-                <div class="email-input row">
-                    <input class="form-element" placeholder="E-mail"/>
-                </div>
+                <div class="col-1-2 product-info">
+                    <h1>Misool Makoli Rice Wine</h1>
+                    <h2>$40</h2>
+                    <h4>Sold out</h4>
+                    <form action="http://formspree.io/nil.nicklas@gmail.com" method="POST"> 
+                        <div class="row">
+                            <div class="select-dropdown">
+                                <select class="form-element" name="body">
+                                    <option value="size" selected>Plain</option>
+                                    <option value="size">Strawberry</option>
+                                </select>
+                            </div>
+                            
+                            <div class="select-dropdown">
+                                <select class="form-element" name="body2">
+                                    <option value="quantity">1</option>
+                                    <option value="quantity">2</option>
+                                    <option value="quantity">3</option>
+                                    <option value="quantity">4</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="email-input row">
+                            <input class="form-element" placeholder="E-mail" type="email" name="_replyto"/>
+                        </div>
+                        
+                        <div class="row">
+                            <input type="submit" class="add-btn" value="Notify me when available">
+                        </div>
+                    </form>
 
-                <div class="row">
-                    <a href="" class="add-btn">Notify me when available</a>
+                    <p>Makoli made with simple ingredients- water, rice, nuruk. Delicate nose on jasmine blossom, honey and a bit of apple, and velvety texture and thin fizzy bubbles, with just the right acidity. Pair with rich, creamy, and full flavor food like boeuf bourguignon or risotto, or enjoy as it is 🌾.</p>
+                    
+                    <a href="" class="share-link">Tweet</a>
+                    <a href="" class="share-link">Like</a>
+                    <a href="" class="share-link">Pin</a>
+                    <a href="" class="share-link">Email</a>
                 </div>
-            </div>    
-                <p>Makoli made with simple ingredients- water, rice, nuruk. Delicate nose on jasmine blossom, honey and a bit of apple, and velvety texture and thin fizzy bubbles, with just the right acidity. Pair with rich, creamy, and full flavor food like boeuf bourguignon or risotto, or enjoy as it is 🌾.</p>
-                
-                <a href="" class="share-link">Tweet</a>
-                <a href="" class="share-link">Like</a>
-                <a href="" class="share-link">Pin</a>
-                <a href="" class="share-link">Email</a>
-            </div>
-        </div>        
-    </div>
-    <footer>
-        <h3>Brewed and tapped in Malmö, Sweden</h3>
-    </footer>
-</body>
-</html>
+            </div>        
+        </div>
+        <footer>
+            <h3>Brewed and tapped in Malmö, Sweden</h3>
+        </footer>
+    </body>
+    </html>
+    
